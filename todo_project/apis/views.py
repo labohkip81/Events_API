@@ -15,5 +15,7 @@ class DetailTodo(generics.RetrieveUpdateDestroyAPIView):
 
 
 class UserCreate(generics.CreateAPIView):
+    authentication_classes= ()
+    permission_classes = ()
     serializer_class=UserSerializer
     
