@@ -1,3 +1,4 @@
+
 """
 Django settings for todo_project project.
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'dd((#h#$%*ydq7m&osl&=bnsl))14(g5_^z#+(#!jta&)#vrn7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
