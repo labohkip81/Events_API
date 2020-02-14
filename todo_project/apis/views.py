@@ -2,7 +2,7 @@ from rest_framework import generics
 
 
 from todos import models
-from .serializers import TodoSerializer,
+from .serializers import TodoSerializer
 
 
 class ListTodo(generics.ListCreateAPIView):
