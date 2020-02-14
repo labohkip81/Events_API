@@ -2,7 +2,7 @@ from rest_framework import generics
 
 
 from todos import models
-from .serializers import TodoSerializer, UserSerializer
+from .serializers import TodoSerializer,
 
 
 class ListTodo(generics.ListCreateAPIView):
@@ -14,8 +14,5 @@ class DetailTodo(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TodoSerializer
 
 
-class UserCreate(generics.CreateAPIView):
-    authentication_classes= ()
-    permission_classes = ()
-    serializer_class=UserSerializer
+
     
