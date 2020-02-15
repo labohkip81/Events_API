@@ -26,7 +26,10 @@ SECRET_KEY = 'dd((#h#$%*ydq7m&osl&=bnsl))14(g5_^z#+(#!jta&)#vrn7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*',]
+
+ALLOWED_HOSTS = []
+AUTH_USER_MODEL = "users.CustomUser" 
+
 
 
 # Application definition
@@ -38,21 +41,32 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # external contrib
+    'django.contrib.sites',
 
     #local apps.
     'todos.apps.TodosConfig',
     'apis.apps.ApisConfig',
+    'users',
 
 
     #external apps.
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_framework_simplejwt',
+    'rest_auth',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+
+    #third party package for user registration and authentication endpoints 	
 ]
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
-    ]
+    'DEFAULT_PERMISSION_CLASSES': [],
+    'DEFAULT_AUTHENTICATION_CLASSES':[],
+   
 }
 
 
@@ -135,3 +149,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# own stuff
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SITE_ID = 1

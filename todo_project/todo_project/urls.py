@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('apis/v1/', include('apis.urls')),
 ]
+
+
+# Logout :http://127.0.0.1:8000/apis/v1/rest-auth/logout/
+# Login  :http://127.0.0.1:8000/apis/v1/rest-auth/login/
+# Registration :http://127.0.0.1:8000/apis/v1/rest-auth/registration/
