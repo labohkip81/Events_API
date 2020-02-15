@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #local apps.
     'todos.apps.TodosConfig',
     'apis.apps.ApisConfig',
+    'users',
 
 
     #external apps.
