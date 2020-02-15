@@ -41,14 +41,13 @@ INSTALLED_APPS = [
     #local apps.
     'todos.apps.TodosConfig',
     'apis.apps.ApisConfig',
-    'accounts',
 
 
     #external apps.
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
-    'rest_registration',
+  
     #third party package for user registration and authentication endpoints 	
     'djoser'
 ]
