@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # external contrib
+    'django.contrib.sites',
 
     #local apps.
     'todos.apps.TodosConfig',
@@ -48,9 +50,12 @@ INSTALLED_APPS = [
     #external apps.
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_auth',
     'rest_framework_simplejwt',
-  
+    'rest_auth',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+
     #third party package for user registration and authentication endpoints 	
 ]
 
@@ -143,3 +148,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # own stuff
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SITE_ID = 1

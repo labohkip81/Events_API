@@ -20,5 +20,9 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('apis/v1/', include('apis.urls')),
-    url(r'^api-auth/', include('rest_framework.urls'))
 ]
+
+
+# Logout :http://127.0.0.1:8000/apis/v1/rest-auth/logout/
+# Login  :http://127.0.0.1:8000/apis/v1/rest-auth/login/
+# Registration :http://127.0.0.1:8000/apis/v1/rest-auth/registration/
