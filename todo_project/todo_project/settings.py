@@ -26,6 +26,7 @@ SECRET_KEY = 'dd((#h#$%*ydq7m&osl&=bnsl))14(g5_^z#+(#!jta&)#vrn7'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+AUTH_USER_MODEL = "users.CustomUser" 
 
 
 # Application definition
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     #external apps.
     'rest_framework',
     'rest_framework.authtoken',
+    'rest_auth',
     'rest_framework_simplejwt',
   
     #third party package for user registration and authentication endpoints 	
@@ -145,3 +147,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# own stuff
