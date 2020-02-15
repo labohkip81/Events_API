@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
   
     #third party package for user registration and authentication endpoints 	
-    'djoser'
 ]
 
 
